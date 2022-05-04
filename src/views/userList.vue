@@ -460,10 +460,9 @@ export default {
         type: "warning"
       })
         .then(() => {
-          let url = `/user/${row.id}`;
-          let param = `uid=${row.id}`;
+          let url = "/user/" + row.id;
           axios
-            .delete(url, param)
+            .delete(url)
             .then(response => {
               console.log(response.data);
               if (response.data.flag) {
